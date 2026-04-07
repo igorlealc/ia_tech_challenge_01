@@ -1,3 +1,6 @@
 trabalho/*
 __pycache__/*
 *.DS_Store
+dbc_origem/*
+dbf_origem/*
+.venv/*
