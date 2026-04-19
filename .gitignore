@@ -4,3 +4,5 @@ __pycache__/*
 dbc_origem/*
 dbf_origem/*
 .venv/*
+*.parquet
+*.log
