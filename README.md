@@ -4,11 +4,12 @@
 
 Este trabalho utiliza dados públicos do DATASUS, especificamente a base **SIH/SUS RD - AIH Reduzida** do estado do Rio de Janeiro no ano de 2025.
 
-O objetivo geral é construir um fluxo de ciência de dados dividido em três partes:
+O objetivo geral é construir um fluxo de ciência de dados dividido em quatro partes:
 
 1. Redução e organização inicial da base hospitalar.
 2. Tratamento, validação e criação de variáveis derivadas.
 3. Construção e avaliação de modelos de regressão para previsão do valor total da internação.
+4. Análise exploratória e agrupamento de perfis relacionados ao câncer de mama.
 
 Os notebooks foram organizados em sequência para facilitar a apresentação do trabalho, a leitura técnica e a reprodução conceitual das etapas executadas.
 
@@ -31,6 +32,7 @@ Arquivos finais disponibilizados:
 | `trabalho/trabalho_parte_1.ipynb` | Parte 1 | Reduzir o volume da base consolidada e gerar a base reduzida. |
 | `trabalho/trabalho_parte_2.ipynb` | Parte 2 | Tratar a base reduzida, validar campos e gerar a base tratada. |
 | `trabalho/trabalho_parte_3.ipynb` | Parte 3 | Treinar e avaliar modelos para previsão de `VAL_TOT`. |
+| `trabalho/trabalho_parte_4.ipynb` | Parte 4 | Explorar agrupamentos de perfis relacionados ao câncer de mama com KMeans e DBSCAN. |
 
 ## Parte 1 - Redução do volume da base de dados
 
@@ -143,6 +145,37 @@ A transformação logarítmica apresentou desempenho inadequado após a reversã
 
 O teste com PCA não trouxe ganho relevante de desempenho, pois os resultados permaneceram praticamente iguais aos do modelo sem redução de dimensionalidade.
 
+## Parte 4 - Agrupamentos relacionados ao câncer de mama
+
+Arquivo: `trabalho/trabalho_parte_4.ipynb`
+
+Este notebook apresenta uma etapa de análise exploratória com técnicas de agrupamento não supervisionado. O foco é investigar se atributos pessoais e administrativos simples, com destaque para `IDADE_ANOS` e `RACA_COR`, permitem identificar perfis relevantes entre pacientes com algum nível de evidência de câncer de mama.
+
+### Principais ações executadas
+
+- Carregamento da base tratada com recorte para pacientes do sexo feminino e com `CANCER_MAMA_NIVEL > 0`.
+- Análise descritiva inicial e recorte das colunas utilizadas no experimento.
+- Conferência das dimensões da base e preparação de variáveis auxiliares.
+- Registro interpretativo dos níveis de câncer de mama e da codificação de `RACA_COR`.
+- Geração de distribuições gerais e estratificadas por nível de câncer de mama.
+- Inspeção de boxplots, histogramas e correlação entre variáveis pessoais.
+- Criação de faixas para dias de internação.
+- Execução de experimentos com `KMeans` sem escalonamento.
+- Avaliação da distribuição dos grupos, centróides e teste de diferentes valores de `k` com método elbow.
+- Repetição do `KMeans` com padronização.
+- Aplicação de one-hot encoding em `RACA_COR`.
+- Aplicação de `PCA` e novos testes de clusterização com `KMeans`.
+- Execução de `DBSCAN` para comparação com a abordagem baseada em centróides.
+- Comparação final dos resultados com `silhouette score`.
+
+### Resultado geral da análise de agrupamentos
+
+O melhor resultado quantitativo do notebook foi obtido com **KMeans**, alcançando **silhouette score de 0,7763** após one-hot encoding e PCA. O **DBSCAN** apresentou **silhouette score de 0,6842**, ficando abaixo da melhor configuração do `KMeans`.
+
+Apesar disso, a conclusão analítica do notebook é que os agrupamentos encontrados **não formaram perfis pessoais suficientemente significativos**. Na prática, os grupos ficaram definidos quase integralmente pela variável **idade**, enquanto `RACA_COR` teve contribuição limitada na segmentação.
+
+Isso indica que, embora as técnicas tenham produzido separações matematicamente válidas, o conjunto de variáveis utilizado nesta etapa foi insuficiente para gerar uma leitura exploratória mais rica sobre perfis relacionados ao câncer de mama. O notebook registra como principal recomendação futura a repetição desse tipo de análise com **apoio de especialista do domínio**, para orientar a escolha de atributos mais informativos e clinicamente interpretáveis.
+
 ## Fluxo resumido da entrega
 
 ```text
@@ -165,6 +198,12 @@ trabalho_parte_3.ipynb
         |
         v
 avaliação dos modelos de regressão
+        |
+        v
+trabalho_parte_4.ipynb
+        |
+        v
+análise exploratória e agrupamentos
 ```
 
 ## Considerações para apresentação
@@ -178,6 +217,5 @@ O trabalho demonstra um pipeline completo de ciência de dados aplicado a dados 
 - avaliação de problemas de qualidade e consistência;
 - preparação de features;
 - treinamento e comparação de modelos;
+- experimentos de agrupamento não supervisionado;
 - análise crítica dos resultados.
-
-Como ponto de melhoria futura, recomenda-se aprofundar a validação das variáveis com apoio de especialista de domínio, principalmente para reduzir risco de uso de variáveis pós-evento e melhorar a interpretação clínica ou administrativa dos modelos.
