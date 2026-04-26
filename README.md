@@ -15,10 +15,6 @@ Os notebooks foram organizados em sequência para facilitar a apresentação do 
 
 ## Dados
 
-### Documentação de apoio
-
-CERQUEIRA, Daniel R. C.; COELHO, Danilo S. C.; ALVES, Paloma P.; REIS, Milena V. M.; LIMA, Adriana S. **Uma análise da base de dados do Sistema de Informação Hospitalar entre 2001 e 2018: dicionário dinâmico, disponibilidade dos dados e aspectos metodológicos para a produção de indicadores sobre violência**. Brasília: Ipea, 2019. Disponível em: <https://www.ipea.gov.br/atlasviolencia/arquivos/artigos/9058-sistemahospitalar.pdf>. Acesso em: 26 abr. 2026.
-
 As bases utilizadas neste trabalho referem-se a dados do DATASUS de pronto atendimento no estado do Rio de Janeiro durante 2025.
 
 Arquivos originais em formato DBC:
@@ -28,6 +24,10 @@ Arquivos originais em formato DBC:
 Arquivos finais disponibilizados:
 
 - Versão final consolidada: <https://1drv.ms/u/c/82e7decc796c67f4/IQAzoDEOMdnWQIdJivtSpFz_AanG6z7Cq5c6qFcp1soRwDM?e=hLqcXC>
+
+## Documentação de apoio
+
+CERQUEIRA, Daniel R. C.; COELHO, Danilo S. C.; ALVES, Paloma P.; REIS, Milena V. M.; LIMA, Adriana S. **Uma análise da base de dados do Sistema de Informação Hospitalar entre 2001 e 2018: dicionário dinâmico, disponibilidade dos dados e aspectos metodológicos para a produção de indicadores sobre violência**. Brasília: Ipea, 2019. Disponível em: <https://www.ipea.gov.br/atlasviolencia/arquivos/artigos/9058-sistemahospitalar.pdf>. Acesso em: 26 abr. 2026.
 
 ## Estrutura dos notebooks
 
