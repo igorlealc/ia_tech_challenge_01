@@ -33,7 +33,7 @@ Arquivo consolidado disponibilizado:
 | `remove_parquet_columns.py` | Remoção incremental de colunas em Parquet. |
 | `README_SCRIPTS_AUXILIARES.md` | Uso detalhado dos scripts auxiliares. |
 | `material_aulas/` | PDFs das aulas usados como referência conceitual. |
-| `PROMPT_PADRAO_PARTE_6.md` | Prompt-base para manter o padrão de modelagem e análise da Parte 6. |
+| `PROMPT_PADRAO_PROJETO.md` | Prompt-base para manter o padrão técnico e narrativo do projeto inteiro. |
 
 ## Material de aula
 
