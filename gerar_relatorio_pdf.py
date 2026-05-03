@@ -10,8 +10,8 @@ from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer
 
 
 ROOT = Path(__file__).resolve().parent
-INPUT_FILE = ROOT / "RELATORIO_EXPLICATIVO_PARTE_6.md"
-OUTPUT_FILE = ROOT / "RELATORIO_EXPLICATIVO_PARTE_6.pdf"
+INPUT_FILE = ROOT / "RELATORIO_EXPLICATIVO_PARTE_4.md"
+OUTPUT_FILE = ROOT / "RELATORIO_EXPLICATIVO_PARTE_4.pdf"
 
 
 def build_styles():
@@ -111,7 +111,7 @@ def main():
         rightMargin=2 * cm,
         topMargin=2 * cm,
         bottomMargin=2 * cm,
-        title="Relatorio Explicativo - Parte 6",
+        title="Relatorio Explicativo - Parte 4",
         author="OpenAI Codex",
     )
     doc.build(story)

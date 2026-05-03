@@ -1,10 +1,10 @@
-# Relatório Explicativo - Parte 6
+# Relatório Explicativo - Parte 4
 
 ## Visão geral
 
-Este documento explica, de forma simples e passo a passo, o que foi feito na Parte 6 do projeto, por que cada decisão foi tomada e como interpretar os resultados.
+Este documento explica, de forma simples e passo a passo, o que foi feito na Parte 4 do projeto, por que cada decisão foi tomada e como interpretar os resultados.
 
-A Parte 6 teve como foco um problema de **classificação supervisionada**. O objetivo foi usar a base tratada do DATASUS para identificar **indícios de câncer de mama**.
+A Parte 4 teve como foco um problema de **classificação supervisionada**. O objetivo foi usar a base tratada do DATASUS para identificar **indícios de câncer de mama**.
 
 Em outras palavras, queríamos responder à seguinte pergunta:
 
@@ -12,7 +12,7 @@ Em outras palavras, queríamos responder à seguinte pergunta:
 
 ## 1. De onde partimos
 
-Antes da Parte 6, o projeto já havia passado por etapas importantes:
+Antes da Parte 4, o projeto já havia passado por etapas importantes:
 
 - conversão dos arquivos originais do DATASUS
 - consolidação da base
@@ -22,9 +22,9 @@ Antes da Parte 6, o projeto já havia passado por etapas importantes:
 
 Ao final da Parte 2, chegamos ao arquivo `2025_tratado.parquet`, que foi a base usada na modelagem supervisionada.
 
-Esse ponto é importante porque a Parte 6 não começou do zero. Ela aproveitou uma base já preparada, mais limpa e mais adequada para análise.
+Esse ponto é importante porque a Parte 4 não começou do zero. Ela aproveitou uma base já preparada, mais limpa e mais adequada para análise.
 
-## 2. Qual era o objetivo da Parte 6
+## 2. Qual era o objetivo da Parte 4
 
 O objetivo foi transformar uma informação clínica já presente na base em um problema de classificação binária.
 
@@ -303,7 +303,7 @@ Quanto mais perto de 1, melhor.
 
 ## 13. Conclusão final
 
-A Parte 6 mostrou que o trabalho não era apenas treinar classificadores, mas escolher uma estratégia coerente com o problema.
+A Parte 4 mostrou que o trabalho não era apenas treinar classificadores, mas escolher uma estratégia coerente com o problema.
 
 Os principais pontos da conclusão foram:
 
@@ -319,6 +319,6 @@ Os principais pontos da conclusão foram:
 
 ## 14. Mensagem final para apresentação
 
-Se for preciso resumir toda a Parte 6 em poucas frases:
+Se for preciso resumir toda a Parte 4 em poucas frases:
 
-"Na Parte 6, transformamos a variável de indício de câncer de mama em um target binário e construímos uma etapa de classificação supervisionada. Selecionamos features sem vazamento de target, aplicamos pré-processamento com pipeline, testamos Regressão Logística, KNN e Random Forest, e avaliamos os modelos com métricas adequadas para bases desbalanceadas. Como o contexto é saúde, priorizamos recall, já que falsos negativos são mais graves do que falsos positivos. O principal racional da etapa foi ajustar a modelagem para maximizar a utilidade clínica da triagem, e não apenas a acurácia global."
+"Na Parte 4, transformamos a variável de indício de câncer de mama em um target binário e construímos uma etapa de classificação supervisionada. Selecionamos features sem vazamento de target, aplicamos pré-processamento com pipeline, testamos Regressão Logística, KNN e Random Forest, e avaliamos os modelos com métricas adequadas para bases desbalanceadas. Como o contexto é saúde, priorizamos recall, já que falsos negativos são mais graves do que falsos positivos. O principal racional da etapa foi ajustar a modelagem para maximizar a utilidade clínica da triagem, e não apenas a acurácia global."

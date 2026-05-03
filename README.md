@@ -24,9 +24,10 @@ Arquivo consolidado disponibilizado:
 |---|---|
 | `trabalho_parte_1.ipynb` | Redução inicial da base consolidada. |
 | `trabalho_parte_2.ipynb` | Tratamento da base e criação de variáveis derivadas. |
-| `trabalho_parte_3.ipynb` | Regressão para previsão de `VAL_TOT`. |
-| `trabalho_parte_4.ipynb` | Agrupamentos relacionados ao câncer de mama. |
-| `trabalho_parte_6.ipynb` | Classificação supervisionada para indícios de câncer de mama. |
+| `trabalho_parte_3.ipynb` | Classificação supervisionada com SVM e Random Forest. |
+| `trabalho_parte_4.ipynb` | Classificação supervisionada para indícios de câncer de mama. |
+| `analise_complementar_1.ipynb` | Regressão para previsão de `VAL_TOT`. |
+| `analise_complementar_2.ipynb` | Agrupamentos relacionados ao câncer de mama. |
 | `dbc_to_dbf.py` | Conversão de `.dbc` para `.dbf`. |
 | `dbf_to_parquet.py` | Conversão de `.dbf` para `.parquet`. |
 | `merge_parquet_files.py` | Consolidação de múltiplos arquivos Parquet. |
@@ -39,7 +40,7 @@ Arquivo consolidado disponibilizado:
 
 Os PDFs de apoio da pós foram organizados em `material_aulas/`.
 
-Os tópicos mais diretamente usados na Parte 6 foram:
+Os tópicos mais diretamente usados nas Partes 3 e 4 foram:
 
 - **Aula 1 - Modelos de Classificação**: definição de problema supervisionado, target e separação treino/teste.
 - **Aula 2 - KNN, SVM**: uso de `KNN` e ajuste de `k`.
@@ -119,52 +120,33 @@ Resultado documentado:
 - base tratada com **857.726 registros**
 - base analítica com variáveis derivadas como `IDADE_ANOS`, `DIAG_PRINC_GRUPO`, `VIOLENCIA_MULHER_NIVEL` e `CANCER_MAMA_NIVEL`
 
-## Parte 3 - Previsão do valor total da internação
+## Parte 3 - Classificação supervisionada com SVM e Random Forest
 
 Arquivo: `trabalho_parte_3.ipynb`
 
 Objetivo:
 
-- prever `VAL_TOT` com modelos de regressão
+- construir classificadores supervisionados com `SVM` e `RandomForestClassifier`
 
 Principais ações:
 
-- seleção de features
-- treino/teste
-- regressão linear
-- testes com PCA
-- engenharia de features
-- comparação entre versões do modelo
+- criação do `TARGET` binário
+- seleção de features e prevenção de vazamento
+- separação treino/teste
+- pré-processamento com `ColumnTransformer`
+- tuning leve do `SVM`
+- tuning leve do `Random Forest`
+- comparação dos modelos no conjunto de teste
 
-Resultado documentado:
+Observações metodológicas:
 
-- modelo base com **R² = 0,5664**
-- modelo melhorado com **R² = 0,6370**
+- o `SVM` foi treinado com padronização via `StandardScaler`
+- o `Random Forest` foi usado como alternativa baseada em árvores
+- o `recall` foi mantido como métrica central por causa do contexto de saúde
 
-## Parte 4 - Agrupamentos relacionados ao câncer de mama
+## Parte 4 - Classificação supervisionada para indícios de câncer de mama
 
 Arquivo: `trabalho_parte_4.ipynb`
-
-Objetivo:
-
-- investigar agrupamentos não supervisionados em pacientes com indícios de câncer de mama
-
-Principais ações:
-
-- recorte da base tratada
-- análise exploratória
-- testes com `KMeans`
-- testes com `DBSCAN`
-- avaliação com `silhouette score`
-
-Resultado documentado:
-
-- melhor configuração quantitativa com `KMeans`
-- conclusão analítica de que os grupos ficaram fortemente definidos por idade e pouco interpretáveis do ponto de vista clínico
-
-## Parte 6 - Classificação supervisionada para indícios de câncer de mama
-
-Arquivo: `trabalho_parte_6.ipynb`
 
 Objetivo:
 
@@ -193,18 +175,62 @@ Observações metodológicas:
 - o `KNN` foi treinado em amostra estratificada por custo computacional no Colab
 - `PROC_REA` foi excluída da modelagem por alta cardinalidade
 
-## Como reproduzir a Parte 6
+## Análise Complementar 1 - Previsão do valor total da internação
+
+Arquivo: `analise_complementar_1.ipynb`
+
+Objetivo:
+
+- prever `VAL_TOT` com modelos de regressão
+
+Principais ações:
+
+- seleção de features
+- treino/teste
+- regressão linear
+- testes com PCA
+- engenharia de features
+- comparação entre versões do modelo
+
+Resultado documentado:
+
+- modelo base com **R² = 0,5664**
+- modelo melhorado com **R² = 0,6370**
+
+## Análise Complementar 2 - Agrupamentos relacionados ao câncer de mama
+
+Arquivo: `analise_complementar_2.ipynb`
+
+Objetivo:
+
+- investigar agrupamentos não supervisionados em pacientes com indícios de câncer de mama
+
+Principais ações:
+
+- recorte da base tratada
+- análise exploratória
+- testes com `KMeans`
+- testes com `DBSCAN`
+- avaliação com `silhouette score`
+
+Resultado documentado:
+
+- melhor configuração quantitativa com `KMeans`
+- conclusão analítica de que os grupos ficaram fortemente definidos por idade e pouco interpretáveis do ponto de vista clínico
+
+## Como reproduzir as Partes 3 e 4
 
 Pré-requisito mínimo:
 
-- ter o arquivo `2025_tratado.parquet` no diretório atual do notebook ou em um dos caminhos configurados na primeira célula da Parte 6
+- ter o arquivo `2025_tratado.parquet` no diretório atual do notebook ou em um dos caminhos configurados na primeira célula das Partes 3 e 4
 
 Ordem mínima de execução:
 
 1. gerar `2025_consolidado.parquet` ou obtê-lo a partir do link do README
 2. rodar `trabalho_parte_1.ipynb`
 3. rodar `trabalho_parte_2.ipynb`
-4. rodar `trabalho_parte_6.ipynb`
+4. rodar `trabalho_parte_3.ipynb`
+5. rodar `trabalho_parte_4.ipynb`
 
 ## Considerações finais
 
