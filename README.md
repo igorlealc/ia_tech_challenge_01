@@ -4,7 +4,7 @@
 
 Este projeto utiliza dados públicos do DATASUS, especificamente a base **SIH/SUS RD - AIH Reduzida** do estado do Rio de Janeiro no ano de 2025.
 
-O objetivo do trabalho é construir um fluxo completo de ciência de dados, desde a preparação da base até análises supervisionadas e não supervisionadas.
+O objetivo do trabalho é obter meios para apoio no diagnóstico de câncer de mama por meio de um fluxo completo de ciência de dados, desde a preparação da base até análises supervisionadas e, como material complementar, análises não supervisionadas.
 
 ## Dados
 

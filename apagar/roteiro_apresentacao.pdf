@@ -1,0 +1,828 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R] /Count 7 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Length 3629 >>
+stream
+BT
+/F2 18.0 Tf
+1 0 0 1 54.0 778.0 Tm (Roteiro de Apresentação) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 754.0 Tm () Tj
+/F2 14.0 Tf
+1 0 0 1 54.0 738.0 Tm (Informações gerais) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 719.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 709.0 Tm (Tema: Classificação supervisionada para detecção de indícios de câncer de mama em registros) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 696.0 Tm (hospitalares do DATASUS SIH/SUS RJ 2025) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 681.0 Tm (Objetivo: Apresentar o pipeline de ciência de dados, desde a obtenção e tratamento da base até a) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 668.0 Tm (comparação de modelos de machine learning para triagem de indícios de câncer de mama.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 653.0 Tm (Tempo total estimado: 15 minutos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 638.0 Tm (Tempo por apresentador: 3 minutos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 625.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 615.0 Tm (Apresentadores:) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 602.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 593.0 Tm (- Igor) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 579.0 Tm (- Paulo Eduardo) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 565.0 Tm (- Rod) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 551.0 Tm (- Jonas) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 537.0 Tm (- Gustavo Lima) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 524.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 514.0 Tm (---) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 501.0 Tm () Tj
+/F2 14.0 Tf
+1 0 0 1 54.0 485.0 Tm (Sumário) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 466.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 456.0 Tm (1. Igor - Partes 1 e 2: Dados, EDA e Targets) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 441.0 Tm (2. Paulo Eduardo - Target, Baseline e KNN) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 426.0 Tm (3. Rod - SVM, Random Forest e Tuning Leve) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 411.0 Tm (4. Jonas - Métricas e Interpretação dos Resultados) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 396.0 Tm (5. Gustavo Lima - Considerações Finais) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 383.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 373.0 Tm (---) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 360.0 Tm () Tj
+/F2 14.0 Tf
+1 0 0 1 54.0 344.0 Tm (1. Igor - Partes 1 e 2: Dados, EDA e Targets) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 325.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 312.0 Tm (Tempo estimado) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 297.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 287.0 Tm (3 minutos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 274.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 261.0 Tm (Objetivo da fala) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 246.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 236.0 Tm (Apresentar a origem dos dados, o fluxo de obtenção e consolidação da base, a redução inicial de) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 223.0 Tm (colunas, os tratamentos realizados e a criação das variáveis que sustentam a modelagem.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 210.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 197.0 Tm (Trecho do notebook a ser mostrado) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 182.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 173.0 Tm (- Notebook: `trabalho_parte_1.ipynb`) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 159.0 Tm (- Seções/células: célula 1; Item 1; Item 2; Item 3; Item 4) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 145.0 Tm (- O que destacar visualmente: fonte DATASUS, formato DBC, fluxo DBC -> DBF -> Parquet, base) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 132.0 Tm (`2025_consolidado.parquet`, redução de 114 para 54 colunas e validação da base reduzida.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 119.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 110.0 Tm (- Notebook: `trabalho_parte_2.ipynb`) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 96.0 Tm (- Seções/células: célula 1; Item 2; Item 3; Item 5; Item 6; Item 9) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 82.0 Tm (- O que destacar visualmente: recorte para internações de 2025, avaliação de nulos/vazios,) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 69.0 Tm (criação de `IDADE_ANOS`, tratamento dos campos CID e criação de `CANCER_MAMA_NIVEL`.) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 4348 >>
+stream
+BT
+/F1 9.5 Tf
+1 0 0 1 54.0 788.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 775.0 Tm (Roteiro de fala) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 760.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 750.0 Tm ("A base usada no trabalho vem do DATASUS, mais especificamente do SIH/SUS RD, que é a base de AIH) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 737.0 Tm (reduzida. O recorte foi o estado do Rio de Janeiro no ano de 2025. Os arquivos originais vieram em) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 724.0 Tm (formato DBC e estavam separados por mês. Antes dos notebooks principais, eles foram convertidos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 711.0 Tm (para DBF, depois para Parquet, e por fim consolidados no arquivo 2025_consolidado.parquet.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 698.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 688.0 Tm (Na Parte 1, o objetivo foi reduzir o volume da base. A base consolidada tinha 925.240 registros e) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 675.0 Tm (114 colunas. Depois da análise estrutural, da consulta ao dicionário de dados e da seleção das) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 662.0 Tm (variáveis relevantes, geramos a base 2025_reduzido.parquet, mantendo os mesmos 925.240 registros,) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 649.0 Tm (mas com 54 colunas.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 636.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 626.0 Tm (Na Parte 2, entramos no tratamento dos dados. Primeiro avaliamos tipos, nulos e campos vazios. O) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 613.0 Tm (notebook mostra que não havia nulos formais, mas havia campos vazios principalmente relacionados a) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 600.0 Tm (CIDs, que foram tratados em uma etapa própria. Depois fizemos o recorte das internações de 2025,) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 587.0 Tm (chegando a 857.726 registros.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 574.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 564.0 Tm (Também criamos variáveis derivadas importantes, como SEXO_LABEL, NASC_DT, ANO_NASC, IDADE_ANOS e) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 551.0 Tm (DIAG_PRINC_GRUPO. Uma parte central foi o tratamento dos CIDs, porque os indícios de câncer de) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 538.0 Tm (mama foram identificados a partir desses campos. Com isso, foi criada a variável) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 525.0 Tm (CANCER_MAMA_NIVEL, que depois serviu como base para o target binário da classificação.") Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 512.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 499.0 Tm (Pontos que não podem faltar) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 484.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 475.0 Tm (- Fonte: DATASUS SIH/SUS RD - AIH Reduzida, RJ, 2025.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 461.0 Tm (- Arquivos originais em DBC, convertidos para DBF e Parquet.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 447.0 Tm (- Base consolidada: 925.240 registros e 114 colunas.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 433.0 Tm (- Base reduzida: 925.240 registros e 54 colunas.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 419.0 Tm (- Base tratada: 857.726 registros.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 405.0 Tm (- Tratamento dos CIDs e criação de `CANCER_MAMA_NIVEL`.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 392.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 379.0 Tm (Transição) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 364.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 354.0 Tm ("Com a base tratada e o target derivado dos indícios de câncer de mama, a próxima etapa foi) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 341.0 Tm (transformar isso em um problema supervisionado e começar pelos modelos de referência.") Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 328.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 318.0 Tm (---) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 305.0 Tm () Tj
+/F2 14.0 Tf
+1 0 0 1 54.0 289.0 Tm (2. Paulo Eduardo - Target, Baseline e KNN) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 270.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 257.0 Tm (Tempo estimado) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 242.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 232.0 Tm (3 minutos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 219.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 206.0 Tm (Objetivo da fala) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 191.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 181.0 Tm (Explicar a definição do target binário, a preparação das features, o baseline com Regressão) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 168.0 Tm (Logística e o teste com KNN.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 155.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 142.0 Tm (Trecho do notebook a ser mostrado) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 127.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 118.0 Tm (- Notebook: `trabalho_parte_4.ipynb`) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 104.0 Tm (- Seções/células: Item 1; Item 2; Item 3; Item 4; início do Item 5) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 4674 >>
+stream
+BT
+/F1 9.5 Tf
+1 0 0 1 68.0 787.0 Tm (- O que destacar visualmente: `TARGET = \(CANCER_MAMA_NIVEL > 0\)`, distribuição das classes,) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 774.0 Tm (features selecionadas, exclusão de variáveis com vazamento, `train_test_split\(...,) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 761.0 Tm (stratify=y\)`, `Pipeline`, `ColumnTransformer`, Regressão Logística e KNN.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 748.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 735.0 Tm (Roteiro de fala) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 720.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 710.0 Tm ("Na etapa de modelagem, transformamos a variável CANCER_MAMA_NIVEL em um target binário. A regra) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 697.0 Tm (foi simples: quando CANCER_MAMA_NIVEL era maior que zero, o registro entrava como classe 1, com) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 684.0 Tm (indício; quando era zero, entrava como classe 0, sem indício.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 671.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 661.0 Tm (O primeiro ponto importante é o desbalanceamento. O notebook mostra 848.560 registros na classe 0) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 648.0 Tm (e 9.166 na classe 1. Em proporção, isso dá aproximadamente 98,93% sem indício e 1,07% com indício.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 635.0 Tm (Por isso, desde o início, a modelagem não poderia ser avaliada apenas por accuracy.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 622.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 612.0 Tm (Depois selecionamos as features com cuidado para evitar vazamento de target. Colunas como) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 599.0 Tm (CANCER_MAMA_NIVEL, diagnósticos CID e DIAG_PRINC_GRUPO foram excluídas da modelagem porque) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 586.0 Tm (carregariam informação muito próxima da resposta. As variáveis usadas incluíram idade,) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 573.0 Tm (permanência, diárias, uso de UTI, sexo, raça/cor e algumas variáveis administrativas.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 560.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 550.0 Tm (Como baseline, usamos Regressão Logística. Ela é um bom ponto de comparação porque é simples,) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 537.0 Tm (interpretável e permite trabalhar com probabilidades e ajuste de threshold. Também usamos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 524.0 Tm (class_weight='balanced', justamente para dar mais peso à classe positiva, que é minoria.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 511.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 501.0 Tm (O KNN foi testado como outro modelo clássico de classificação. Como ele depende de distância, o) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 488.0 Tm (uso de StandardScaler no pipeline é importante. O notebook testou valores de k como 3, 5, 9 e 15.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 475.0 Tm (O melhor k ficou em 3, mas o resultado final mostrou uma limitação forte: no teste, o KNN teve) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 462.0 Tm (accuracy alta, 0,9880, mas recall de apenas 0,0207. Isso significa que ele quase não encontrou os) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 449.0 Tm (casos positivos.") Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 436.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 423.0 Tm (Pontos que não podem faltar) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 408.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 399.0 Tm (- Target: `CANCER_MAMA_NIVEL > 0`.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 385.0 Tm (- Distribuição: 848.560 negativos e 9.166 positivos.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 371.0 Tm (- Problema fortemente desbalanceado.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 357.0 Tm (- Uso de `stratify=y` no treino/teste.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 343.0 Tm (- Baseline com Regressão Logística e `class_weight='balanced'`.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 329.0 Tm (- KNN com `k=3`, mas recall final muito baixo: 0,0207.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 316.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 303.0 Tm (Transição) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 288.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 278.0 Tm ("Depois desses primeiros modelos, o grupo comparou abordagens mais robustas, incluindo SVM com) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 265.0 Tm (escala padronizada e Random Forest com um tuning leve.") Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 252.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 242.0 Tm (---) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 229.0 Tm () Tj
+/F2 14.0 Tf
+1 0 0 1 54.0 213.0 Tm (3. Rod - SVM, Random Forest e Tuning Leve) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 194.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 181.0 Tm (Tempo estimado) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 166.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 156.0 Tm (3 minutos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 143.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 130.0 Tm (Objetivo da fala) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 115.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 105.0 Tm (Apresentar o uso de SVM com scaler, o Random Forest, o tuning leve com GridSearchCV e os) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 92.0 Tm (principais resultados da Parte 3.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 79.0 Tm () Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 4705 >>
+stream
+BT
+/F2 11.0 Tf
+1 0 0 1 54.0 783.0 Tm (Trecho do notebook a ser mostrado) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 768.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 759.0 Tm (- Notebook: `trabalho_parte_3.ipynb`) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 745.0 Tm (- Seções/células: Item 1; Item 2; Item 3; Item 4; Item 5; Item 6; Item 7; Conclusão) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 731.0 Tm (- O que destacar visualmente: target binário, features selecionadas, `ColumnTransformer`,) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 718.0 Tm (`StandardScaler`, `LinearSVC`, `RandomForestClassifier`, parâmetros testados e tabela de) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 705.0 Tm (comparação final.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 692.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 679.0 Tm (Roteiro de fala) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 664.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 654.0 Tm ("Na Parte 3, seguimos com o mesmo target binário baseado em CANCER_MAMA_NIVEL > 0. A distribuição) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 641.0 Tm (permaneceu muito desbalanceada: 848.560 registros negativos e 9.166 positivos. Por isso, o tuning) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 628.0 Tm (foi orientado por recall, e não por accuracy.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 615.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 605.0 Tm (O primeiro modelo desta etapa foi o SVM. Como o SVM é sensível à escala das variáveis, ele foi) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 592.0 Tm (treinado dentro de um pipeline com StandardScaler para as variáveis numéricas e one-hot encoding) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 579.0 Tm (para as categóricas. Foi usado LinearSVC com class_weight='balanced'.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 566.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 556.0 Tm (O tuning do SVM foi leve, com GridSearchCV, 3 folds e uma grade pequena. Os parâmetros testados) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 543.0 Tm (envolveram C igual a 0,5, 1,0 e 2,0, com loss='squared_hinge'. O melhor resultado médio de recall) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 530.0 Tm (na validação cruzada foi 0,9270.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 517.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 507.0 Tm (Depois testamos Random Forest, que é um modelo baseado em árvores. A vantagem é que ele consegue) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 494.0 Tm (capturar relações não lineares e interações entre variáveis sem depender tanto da escala. O tuning) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 481.0 Tm (também foi leve, com combinações de n_estimators, max_depth e min_samples_leaf. O melhor conjunto) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 468.0 Tm (foi n_estimators=150, max_depth=8 e min_samples_leaf=5, com recall médio de 0,8567 na validação.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 455.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 445.0 Tm (No teste final, o SVM teve recall de 0,9274, accuracy de 0,6962 e F1 de 0,0612. O Random Forest) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 432.0 Tm (teve recall de 0,9214, accuracy de 0,7250 e F1 de 0,0668. Ou seja, os dois modelos conseguiram) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 419.0 Tm (capturar a maior parte dos positivos, mas com baixa precision, o que mostra muitos falsos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 406.0 Tm (positivos. Dentro do objetivo de triagem em saúde, isso é aceitável até certo ponto, porque o foco) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 393.0 Tm (é reduzir falsos negativos.") Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 380.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 367.0 Tm (Pontos que não podem faltar) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 352.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 343.0 Tm (- SVM exige scaler por ser sensível à escala.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 329.0 Tm (- `LinearSVC` com `class_weight='balanced'`.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 315.0 Tm (- Tuning SVM: `C` em 0,5, 1,0 e 2,0; melhor recall CV 0,9270.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 301.0 Tm (- Random Forest captura relações não lineares.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 287.0 Tm (- Tuning Random Forest: `n_estimators`, `max_depth`, `min_samples_leaf`.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 273.0 Tm (- Resultado teste Parte 3: SVM recall 0,9274; Random Forest recall 0,9214.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 260.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 247.0 Tm (Transição) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 232.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 222.0 Tm ("Com os modelos treinados, a interpretação correta depende das métricas. Por isso, a próxima parte) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 209.0 Tm (foca em recall, F1, accuracy, matriz de confusão e comparação final.") Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 196.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 186.0 Tm (---) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 173.0 Tm () Tj
+/F2 14.0 Tf
+1 0 0 1 54.0 157.0 Tm (4. Jonas - Métricas e Interpretação dos Resultados) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 138.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 125.0 Tm (Tempo estimado) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 110.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 100.0 Tm (3 minutos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 87.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 74.0 Tm (Objetivo da fala) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 5065 >>
+stream
+BT
+/F1 9.5 Tf
+1 0 0 1 54.0 788.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 778.0 Tm (Explicar por que o recall foi a métrica principal, como interpretar as métricas em base) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 765.0 Tm (desbalanceada e como os resultados apoiaram a comparação dos modelos.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 752.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 739.0 Tm (Trecho do notebook a ser mostrado) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 724.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 715.0 Tm (- Notebook: `trabalho_parte_4.ipynb`) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 701.0 Tm (- Seções/células: Item 5; Item 6; Item 7; Item 8; Conclusão) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 687.0 Tm (- O que destacar visualmente: classification reports, matrizes de confusão, tabela comparativa,) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 674.0 Tm (validação cruzada, ROC/AUC.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 661.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 652.0 Tm (- Notebook: `trabalho_parte_3.ipynb`) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 638.0 Tm (- Seções/células: Item 7 e Item 8) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 624.0 Tm (- O que destacar visualmente: tabela final SVM vs Random Forest e matrizes de confusão.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 611.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 598.0 Tm (Roteiro de fala) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 583.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 573.0 Tm ("A parte de avaliação é central porque a base é extremamente desbalanceada. Como quase 99% dos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 560.0 Tm (registros são negativos, um modelo que marcasse tudo como sem indício teria accuracy muito alta,) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 547.0 Tm (mas seria inútil para triagem. Por isso, a accuracy aparece como métrica de apoio, mas não como) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 534.0 Tm (critério principal.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 521.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 511.0 Tm (O recall foi definido como métrica principal porque responde à pergunta mais importante: dos casos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 498.0 Tm (que realmente tinham indício, quantos o modelo conseguiu identificar? No contexto de saúde, falso) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 485.0 Tm (negativo é o erro mais crítico, porque significa deixar passar um possível caso positivo.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 472.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 462.0 Tm (O F1-score entra como uma métrica de equilíbrio entre precision e recall. Ele ajuda a observar se) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 449.0 Tm (o modelo está apenas aumentando recall às custas de falsos positivos demais. Mesmo assim, neste) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 436.0 Tm (trabalho, o recall tem prioridade por causa do objetivo de triagem.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 423.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 413.0 Tm (Na Parte 4, o resultado no conjunto de teste mostrou que a Regressão Logística teve recall de) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 400.0 Tm (0,7436, precision de 0,0365 e F1 de 0,0697. O KNN teve accuracy de 0,9880, mas recall de só) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 387.0 Tm (0,0207, identificando apenas 38 dos 1.833 positivos reais. Isso mostra por que accuracy sozinha) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 374.0 Tm (engana. Já o Random Forest teve o melhor comportamento geral no teste: recall de 0,7741, precision) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 361.0 Tm (de 0,0508, F1 de 0,0954 e AUC de 0,8962.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 348.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 338.0 Tm (A matriz de confusão ajuda a traduzir isso em contagens. No Random Forest da Parte 4, foram 1.419) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 325.0 Tm (positivos encontrados e 414 falsos negativos. Na Regressão Logística, foram 1.363 positivos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 312.0 Tm (encontrados e 470 falsos negativos. O KNN deixou passar 1.795 positivos, por isso não foi adequado) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 299.0 Tm (para o objetivo.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 286.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 276.0 Tm (Sobre feature importance do Random Forest, não encontrei esse resultado registrado nos notebooks) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 263.0 Tm (ou relatórios disponíveis. Então essa parte deve ser preenchida depois, caso o grupo gere o) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 250.0 Tm (gráfico ou a tabela no notebook: [PREENCHER COM RESULTADO DO NOTEBOOK/ARQUIVO].") Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 237.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 224.0 Tm (Pontos que não podem faltar) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 209.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 200.0 Tm (- Recall é principal porque falsos negativos são mais graves em saúde.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 186.0 Tm (- Accuracy é insuficiente em base com aproximadamente 99% de negativos.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 172.0 Tm (- KNN teve accuracy alta, mas recall muito baixo.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 158.0 Tm (- Random Forest Parte 4 teve melhor desempenho geral no teste: recall 0,7741, F1 0,0954 e AUC) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 145.0 Tm (0,8962.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 131.0 Tm (- Feature importance não foi encontrada nos arquivos: [PREENCHER COM RESULTADO DO) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 118.0 Tm (NOTEBOOK/ARQUIVO].) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 105.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 92.0 Tm (Transição) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 77.0 Tm () Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+15 0 obj
+<< /Length 4976 >>
+stream
+BT
+/F1 9.5 Tf
+1 0 0 1 54.0 786.0 Tm ("Com essa leitura das métricas, a conclusão do trabalho é que o modelo precisa ser escolhido pelo) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 773.0 Tm (objetivo de triagem, e não apenas pela taxa geral de acerto.") Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 760.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 750.0 Tm (---) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 737.0 Tm () Tj
+/F2 14.0 Tf
+1 0 0 1 54.0 721.0 Tm (5. Gustavo Lima - Considerações Finais) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 702.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 689.0 Tm (Tempo estimado) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 674.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 664.0 Tm (3 minutos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 651.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 638.0 Tm (Objetivo da fala) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 623.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 613.0 Tm (Fechar a apresentação sintetizando o pipeline, os resultados, as limitações e as melhorias) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 600.0 Tm (futuras.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 587.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 574.0 Tm (Trecho do notebook a ser mostrado) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 559.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 550.0 Tm (- Notebook: `trabalho_parte_4.ipynb`) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 536.0 Tm (- Seções/células: Item 6; Item 7; Item 8; Conclusão) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 522.0 Tm (- O que destacar visualmente: comparação final dos modelos, validação cruzada, AUC e conclusão.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 509.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 500.0 Tm (- Notebook: `trabalho_parte_3.ipynb`) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 486.0 Tm (- Seções/células: Conclusão da Parte 3) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 472.0 Tm (- O que destacar visualmente: uso de recall como métrica central e comparação entre SVM e) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 459.0 Tm (Random Forest.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 446.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 433.0 Tm (Roteiro de fala) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 418.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 408.0 Tm ("Para concluir, o trabalho demonstrou um pipeline completo de ciência de dados aplicado a dados) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 395.0 Tm (públicos de saúde. Começamos com dados brutos do DATASUS, fizemos conversão, consolidação, redução) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 382.0 Tm (da base, tratamento de campos, criação de variáveis derivadas e depois modelagem supervisionada.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 369.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 359.0 Tm (O principal aprendizado foi que, em problemas de saúde e com base desbalanceada, a escolha da) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 346.0 Tm (métrica muda completamente a interpretação. Se olhássemos apenas para accuracy, o KNN pareceria) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 333.0 Tm (bom, porque teve 98,80% de acerto. Mas ele praticamente não encontrou a classe positiva. Por isso,) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 320.0 Tm (recall, matriz de confusão, F1 e AUC foram mais importantes para avaliar utilidade real.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 307.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 297.0 Tm (Entre os modelos avaliados na Parte 4, o Random Forest apresentou o melhor comportamento geral no) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 284.0 Tm (conjunto de teste. Ele teve recall de 77,41%, F1 de 9,54% e AUC de 89,62%, capturando 1.419 dos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 271.0 Tm (1.833 casos positivos reais. A Regressão Logística também foi competitiva em recall e teve bom) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 258.0 Tm (resultado na validação cruzada. O SVM da Parte 3 alcançou recall ainda maior, 92,74%, mas com) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 245.0 Tm (baixa precision e grande volume de falsos positivos, o que precisa ser analisado conforme o custo) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 232.0 Tm (operacional de uma triagem.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 219.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 209.0 Tm (As principais limitações foram o forte desbalanceamento da classe positiva, a baixa precision dos) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 196.0 Tm (modelos, o risco de vazamento de target em variáveis diagnósticas e a necessidade de validação com) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 183.0 Tm (especialista de domínio. Também há limitações naturais dos dados administrativos: eles foram) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 170.0 Tm (gerados para registro hospitalar, não necessariamente para predição clínica.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 157.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 147.0 Tm (Como melhorias futuras, o grupo poderia testar estratégias de balanceamento, calibrar thresholds) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 134.0 Tm (com critérios definidos junto a especialistas, incluir validação temporal, avaliar explicabilidade) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 121.0 Tm (do Random Forest e documentar a feature importance no notebook. Mesmo com essas limitações, o) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 108.0 Tm (trabalho mostrou na prática como aplicar machine learning de forma crítica: não basta treinar) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 95.0 Tm (modelos, é preciso alinhar dados, métrica e objetivo do problema.") Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 82.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 69.0 Tm (Pontos que não podem faltar) Tj
+ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 15 0 R >>
+endobj
+17 0 obj
+<< /Length 2122 >>
+stream
+BT
+/F1 9.5 Tf
+1 0 0 1 54.0 788.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 779.0 Tm (- Pipeline completo: obtenção, consolidação, tratamento, target e modelos.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 765.0 Tm (- Accuracy isolada não resolve o problema.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 751.0 Tm (- Random Forest Parte 4 teve melhor comportamento geral no teste.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 737.0 Tm (- SVM Parte 3 teve recall alto, mas muitos falsos positivos.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 723.0 Tm (- Limitações: desbalanceamento, baixa precision, validação de domínio e risco de leakage.) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 709.0 Tm (- Melhorias: balanceamento, threshold, validação temporal, explicabilidade e feature) Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 696.0 Tm (importance.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 683.0 Tm () Tj
+/F2 11.0 Tf
+1 0 0 1 54.0 670.0 Tm (Fechamento) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 655.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 645.0 Tm ("Assim, o trabalho cumpre o objetivo acadêmico de aplicar machine learning em um problema real de) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 632.0 Tm (saúde, mostrando não só os resultados dos modelos, mas também as decisões metodológicas) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 619.0 Tm (necessárias para interpretar esses resultados com responsabilidade.") Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 606.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 596.0 Tm (---) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 583.0 Tm () Tj
+/F2 14.0 Tf
+1 0 0 1 54.0 567.0 Tm (Considerações finais) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 548.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 538.0 Tm (Este roteiro foi construído com base nos arquivos existentes do projeto, especialmente README.md,) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 525.0 Tm (trabalho_parte_1.ipynb, trabalho_parte_2.ipynb, trabalho_parte_3.ipynb, trabalho_parte_4.ipynb e) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 512.0 Tm (RELATORIO_EXPLICATIVO_PARTE_4.md.) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 499.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 489.0 Tm (Informações não localizadas nos arquivos foram mantidas como pendência explícita:) Tj
+/F1 9.5 Tf
+1 0 0 1 54.0 476.0 Tm () Tj
+/F1 9.5 Tf
+1 0 0 1 68.0 467.0 Tm (- Feature importance do Random Forest: [PREENCHER COM RESULTADO DO NOTEBOOK/ARQUIVO]) Tj
+ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 17 0 R >>
+endobj
+xref
+0 19
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000162 00000 n 
+0000000259 00000 n 
+0000000361 00000 n 
+0000004042 00000 n 
+0000004178 00000 n 
+0000008578 00000 n 
+0000008714 00000 n 
+0000013440 00000 n 
+0000013577 00000 n 
+0000018335 00000 n 
+0000018473 00000 n 
+0000023591 00000 n 
+0000023729 00000 n 
+0000028758 00000 n 
+0000028896 00000 n 
+0000031071 00000 n 
+trailer
+<< /Size 19 /Root 1 0 R >>
+startxref
+31209
+%%EOF
