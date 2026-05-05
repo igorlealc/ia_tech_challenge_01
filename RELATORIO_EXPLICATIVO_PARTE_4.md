@@ -322,3 +322,17 @@ Os principais pontos da conclusão foram:
 Se for preciso resumir toda a Parte 4 em poucas frases:
 
 "Na Parte 4, transformamos a variável de indício de câncer de mama em um target binário e construímos uma etapa de classificação supervisionada. Selecionamos features sem vazamento de target, aplicamos pré-processamento com pipeline, testamos Regressão Logística, KNN e Random Forest, e avaliamos os modelos com métricas adequadas para bases desbalanceadas. Como o contexto é saúde, priorizamos recall, já que falsos negativos são mais graves do que falsos positivos. O principal racional da etapa foi ajustar a modelagem para maximizar a utilidade clínica da triagem, e não apenas a acurácia global."
+
+## 15. Roteiro de 3 minutos para apresentação
+
+Se o objetivo for uma fala curta e direta para a Parte 4, o texto pode ser:
+
+"Na etapa de modelagem, transformamos `CANCER_MAMA_NIVEL` em um target binário: valor zero indicava ausência de indício e valor maior que zero indicava presença de indício. Logo no início apareceu o principal desafio: a base era fortemente desbalanceada, com 848.560 registros negativos e apenas 9.166 positivos. Isso significa que quase 99% da base estava na classe 0.
+
+Nesse cenário, o falso negativo é o erro mais crítico. Em um problema de saúde, deixar passar um caso com indício real é pior do que gerar um falso positivo, porque o falso positivo ainda pode seguir para investigação. Por isso, a avaliação não poderia se apoiar só em accuracy.
+
+Como baseline, usamos Regressão Logística com `class_weight='balanced'`. Ela foi escolhida por ser simples, interpretável e por servir como referência inicial para comparar modelos mais complexos. Também montamos todo o fluxo com `Pipeline`, `ColumnTransformer` e `train_test_split` com `stratify=y`, preservando a proporção entre as classes.
+
+Depois testamos KNN, que é um modelo baseado em distância e, por isso, depende de padronização das variáveis. O melhor valor encontrado foi `k=3`, mas o comportamento final foi ruim para o objetivo do projeto. O KNN teve accuracy alta, de 0,9880, mas recall de apenas 0,0207. Na prática, isso significa que ele identificou só 38 dos 1.833 positivos reais e deixou passar 1.795 casos.
+
+Esse resultado mostra exatamente por que a accuracy sozinha pode enganar em base desbalanceada. O modelo parecia acertar muito, mas errava justamente o que mais importava. Então, para este problema, o baseline com Regressão Logística foi mais coerente como ponto de partida, e o KNN se mostrou inadequado para uma triagem em saúde orientada por redução de falsos negativos."
